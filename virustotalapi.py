@@ -119,7 +119,6 @@ class VirusTotalAPI:
             r = requests.get(url, params=params)
             self.handle_api_response(r.status_code)
             json = r.json()
-            print json
             vt_response_code = json['response_code']
             vt_verbose_msg =  json['verbose_msg']
             if vt_response_code == 1:
@@ -140,7 +139,6 @@ class VirusTotalAPI:
             r = requests.get('%s?%s' %(url,parameters))
             self.handle_api_response(r.status_code)
             json = r.json()
-            print json
             vt_response_code = json['response_code']
             vt_verbose_msg =  json['verbose_msg']
             if vt_response_code == 1:
@@ -161,7 +159,6 @@ class VirusTotalAPI:
             r = requests.get('%s?%s' %(url,parameters))
             self.handle_api_response(r.status_code)
             json = r.json()
-            print json
             vt_response_code = json['response_code']
             vt_verbose_msg =  json['verbose_msg']
             if vt_response_code == 1:
