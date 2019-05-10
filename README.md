@@ -1,5 +1,5 @@
 # VirusTotalAPI
-This is a class to consum the VirusTotal Public API 2.0 as documented here:
+This is a class to consume the VirusTotal Public API 2.0 as documented here:
 
 https://www.virustotal.com/en/documentation/public-api/
 
