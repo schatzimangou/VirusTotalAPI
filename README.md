@@ -12,7 +12,7 @@ https://developers.virustotal.com/reference#getting-started
 ```
 from virustotalapi import VirusTotalAPI
 
-vt = VirusTotalAPI('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+vt = VirusTotalAPI('<your_api_key>')
 
 print vt.file_scan('malware.png')
 print vt.file_report('malware.png')
