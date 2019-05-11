@@ -1,8 +1,6 @@
 from virustotalapi import VirusTotalAPI
 
-vt = VirusTotalAPI('<your_api_key>')
+vt = VirusTotalAPI('1a9ab77640f8f5a1c955319c646f0f6138c110cce550676f8f7fdd9a9dd4c571')
 
-print vt.file_scan('malware.png')
-print vt.file_report('malware.png')
-print vt.url_report("https://www.google.gr")
-print vt.domain_report("google.gr")
+
+print vt.url_report("https://askldaskljdlaskjd.com/test/est")

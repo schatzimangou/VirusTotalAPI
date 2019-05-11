@@ -50,6 +50,8 @@ class VirusTotalAPI:
         if os.path.isfile(file):
             with open(file, 'rb') as f:
                 fhash = hashlib.sha256(f.read()).hexdigest()
+        else:
+            fhash = file
         params = {'apikey': self.api_key, 'resource': fhash}
         try:
             r = requests.get(url, params=params)
@@ -74,6 +76,8 @@ class VirusTotalAPI:
         if os.path.isfile(file):
             with open(file, 'rb') as f:
                 fhash = hashlib.sha256(f.read()).hexdigest()
+        else:
+            fhash = resource
         params = {'apikey': self.api_key, 'resource': fhash}
         try:
             r = requests.get(url, params=params)
@@ -159,6 +163,7 @@ class VirusTotalAPI:
             r = requests.get('%s?%s' %(url,parameters))
             self.handle_api_response(r.status_code)
             json = r.json()
+
             vt_response_code = json['response_code']
             vt_verbose_msg =  json['verbose_msg']
             if vt_response_code == 1:
